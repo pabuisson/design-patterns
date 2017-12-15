@@ -1,5 +1,12 @@
 require 'colorize'
 
+# PATTERN: OBJECT POOL
+# REFERENCES:
+#   - http://www.oodesign.com/object-pool-pattern.html
+#   - https://sourcemaking.com/design_patterns/object_pool
+
+# -----------------------------------------------------------------------------
+
 # Use a reusable Table object, through a table pool
 # Game does not start until there's a table available in the table pool
 class Match
