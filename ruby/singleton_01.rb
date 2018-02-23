@@ -26,7 +26,7 @@ puts 'Second call to SingletonApp.instance'.colorize(:yellow)
 s2 = SingletonApp.instance
 puts "S1 == S2 ? #{ s1 == s2 }".colorize(:green)
 
-puts
+# puts
 
 begin
   puts "Let's try and call new on SingletonApp..."
