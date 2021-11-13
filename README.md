@@ -14,3 +14,4 @@ Just a collection of my own implementations of some design patterns. I'm no expe
 ### Behavioral patterns
 
 * Chain of responsibility
+* Command

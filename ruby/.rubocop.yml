@@ -1,2 +1,4 @@
 Style/ClassVars:
   Enabled: false
+Lint/MissingSuper:
+  Enabled: false
