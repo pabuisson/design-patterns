@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 # PATTERN: OBJECT POOL
@@ -12,7 +14,7 @@ require 'colorize'
 class Match
   attr_accessor :table, :table_pool, :match_number
 
-  def initialize( match_number, table_pool )
+  def initialize(match_number, table_pool)
     @match_number = match_number
     @table_pool = table_pool
     wait_for_table
@@ -24,12 +26,15 @@ class Match
 
   def play
     return unless @table
+
     puts "Game #{@match_number} started on table #{@table.number}".colorize(:green)
 
-    begin
+    loop do
       puts "Table #{@table.number} : game #{@match_number} in progress...".colorize(:light_yellow)
       sleep(1)
-    end until rand > 0.8
+
+      break if rand > 0.8
+    end
 
     puts "✓ Game #{@match_number} finished on table #{@table.number}, leave the table".colorize(:green)
 
@@ -46,7 +51,7 @@ class Table
     @number = number
     puts "Setting up table #{@number}".colorize(:light_blue)
     sleep 5
-    puts "Table #{@number} ready! Phew, it took quit long time!".colorize(:light_blue)
+    puts "Table #{@number} ready! Phew, it took quite a long time!".colorize(:light_blue)
   end
 end
 

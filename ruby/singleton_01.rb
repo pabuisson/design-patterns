@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 class SingletonApp
@@ -24,9 +26,7 @@ puts 'First call to SingletonApp.instance'.colorize(:yellow)
 s1 = SingletonApp.instance
 puts 'Second call to SingletonApp.instance'.colorize(:yellow)
 s2 = SingletonApp.instance
-puts "S1 == S2 ? #{ s1 == s2 }".colorize(:green)
-
-# puts
+puts "S1 == S2 ? #{s1 == s2}".colorize(:green)
 
 begin
   puts "Let's try and call new on SingletonApp..."

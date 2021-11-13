@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 # The "Request" that needs to be processed
@@ -25,7 +27,7 @@ class Developer
   end
 
   def develop(project)
-    puts "Will transmit the demand to someone else."
+    puts 'Will transmit the demand to someone else.'
     call_next(project)
   end
 

@@ -14,7 +14,6 @@ require 'singleton'
 
 class SingletonApp
   include Singleton
-
 end
 
 # ---------------
@@ -23,14 +22,12 @@ puts 'First call to SingletonApp.instance'.colorize(:yellow)
 s1 = SingletonApp.instance
 puts 'Second call to SingletonApp.instance'.colorize(:yellow)
 s2 = SingletonApp.instance
-puts "S1 == S2 ? #{ s1 == s2 }".colorize(:green)
-
-puts
+puts "S1 == S2 ? #{s1 == s2}".colorize(:green)
 
 begin
   puts "Let's try and call new on SingletonApp..."
   SingletonApp.new
   puts "It worked (it shouldn't...)".colorize(:red)
-rescue
+rescue NoMethodError
   puts 'It failed...as expected!'.colorize(:green)
 end
